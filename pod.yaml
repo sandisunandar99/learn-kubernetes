@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tutum-hello-world
+  labels:
+    name: tutum-hello-world
+spec:
+  containers:
+  - name: tutum-hello-world
+    image: sandisunandar99/tutum-hello-world-rebuild
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
